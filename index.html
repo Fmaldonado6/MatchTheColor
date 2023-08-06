@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Match the color</h1>
+      <div class="color-samples">
+        <div class="color-sample target" id="target"></div>
+
+        <div class="color-sample answer" id="answer"></div>
+      </div>
+
+      <div class="sliders-container">
+        <div class="slider-container">
+          <input
+            type="range"
+            step="5"
+            min="0"
+            max="255"
+            value="50"
+            class="slider red"
+            id="red"
+          />
+
+          <div class="value">
+            <span id="redValue">50</span>
+          </div>
+        </div>
+
+        <div class="slider-container">
+          <input
+            type="range"
+            step="5"
+            min="0"
+            max="255"
+            value="50"
+            class="slider green"
+            id="green"
+          />
+
+          <div class="value">
+            <span id="greenValue">50</span>
+          </div>
+        </div>
+
+        <div class="slider-container">
+          <input
+            type="range"
+            step="5"
+            min="0"
+            max="255"
+            value="50"
+            class="slider blue"
+            id="blue"
+          />
+
+          <div class="value">
+            <span id="blueValue">50</span>
+          </div>
+        </div>
+
+        <span class="attempts" id="attempts-counter">Attempts: 0/5</span>
+
+        <div class="buttons">
+          <button class="button submit" id="answer-button">Validate</button>
+          <button class="button" id="restart-button">Restart</button>
+        </div>
+      </div>
+
+      <div class="results" id="result-container">
+        <div class="result-container hidden" id="result-template">
+          <div class="red-result result">
+            <span class="material-symbols-outlined"> done </span>
+            <span class="material-symbols-outlined"> chevron_right </span>
+            <span class="material-symbols-outlined"> chevron_left </span>
+          </div>
+          <div class="green-result result">
+            <span class="material-symbols-outlined"> done </span>
+            <span class="material-symbols-outlined"> chevron_right </span>
+            <span class="material-symbols-outlined"> chevron_left </span>
+          </div>
+          <div class="blue-result result">
+            <span class="material-symbols-outlined"> done </span>
+            <span class="material-symbols-outlined"> chevron_right </span>
+            <span class="material-symbols-outlined"> chevron_left </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <script src="index.js"></script>
+  </body>
+</html>
