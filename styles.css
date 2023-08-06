@@ -11,6 +11,10 @@ html {
   margin-top: 10px;
 }
 
+h1 {
+  text-align: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -183,10 +187,12 @@ html {
   margin: 20px 0px;
   background-color: rgb(136, 136, 136);
   border: none;
-  padding: 10px 50px;
+  padding: 10px 0px;
   border-radius: 20px;
+  max-width: 200px;
+  flex: 1;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 2px;
   color: white;
   transition: filter 0.2s ease;
@@ -203,6 +209,9 @@ html {
 .buttons {
   display: flex;
   gap: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes cube {
