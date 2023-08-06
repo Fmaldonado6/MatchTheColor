@@ -95,7 +95,9 @@ answerButton.onclick = (e) => {
 
   if (attempts == 5) {
     setTimeout(() => {
-      alert("You lose!");
+      alert(
+        `You lose! correct answer: R:${target.r}, G:${target.g}, B:${target.b}`
+      );
     }, 200);
 
     return;
@@ -121,9 +123,9 @@ function updateTargetColor() {
 }
 
 function generateRandomColor() {
-  const r = Math.round((Math.random() * 255) / 5) * 5;
-  const g = Math.round((Math.random() * 255) / 5) * 5;
-  const b = Math.round((Math.random() * 255) / 5) * 5;
+  const r = Math.round((Math.random() * 255) / 15) * 15;
+  const g = Math.round((Math.random() * 255) / 15) * 15;
+  const b = Math.round((Math.random() * 255) / 15) * 15;
   return { r, g, b };
 }
 
