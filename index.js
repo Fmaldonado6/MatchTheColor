@@ -14,8 +14,11 @@ const resultContainer = document.getElementById("result-container");
 
 const answerButton = document.getElementById("answer-button");
 const restartButton = document.getElementById("restart-button");
+const closeButton = document.getElementById("close-button");
 
 const attemptsCounter = document.getElementById("attempts-counter");
+
+const dialog = document.getElementById("dialog");
 
 let colorAnswer = {
   r: 50,
@@ -51,19 +54,27 @@ function init() {
 redSlider.oninput = (e) => {
   colorAnswer.r = Number.parseInt(e.target.value);
   redSliderValue.innerText = colorAnswer.r;
+  window.navigator.vibrate(10);
+
   updateAnswerColor();
 };
 
 greenSlider.oninput = (e) => {
   colorAnswer.g = Number.parseInt(e.target.value);
   greenSliderValue.innerText = colorAnswer.g;
+  window.navigator.vibrate(10);
   updateAnswerColor();
 };
 
 blueSlider.oninput = (e) => {
   colorAnswer.b = Number.parseInt(e.target.value);
   blueSliderValue.innerText = colorAnswer.b;
+  window.navigator.vibrate(10);
   updateAnswerColor();
+};
+
+closeButton.onclick = () => {
+  dialog.style.display = "none";
 };
 
 answerButton.onclick = (e) => {
