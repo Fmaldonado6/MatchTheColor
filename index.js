@@ -54,7 +54,7 @@ function init() {
 redSlider.oninput = (e) => {
   colorAnswer.r = Number.parseInt(e.target.value);
   redSliderValue.innerText = colorAnswer.r;
-  window.navigator.vibrate(10);
+  vibrate(10);
 
   updateAnswerColor();
 };
@@ -62,14 +62,14 @@ redSlider.oninput = (e) => {
 greenSlider.oninput = (e) => {
   colorAnswer.g = Number.parseInt(e.target.value);
   greenSliderValue.innerText = colorAnswer.g;
-  window.navigator.vibrate(10);
+  vibrate(10);
   updateAnswerColor();
 };
 
 blueSlider.oninput = (e) => {
   colorAnswer.b = Number.parseInt(e.target.value);
   blueSliderValue.innerText = colorAnswer.b;
-  window.navigator.vibrate(10);
+  vibrate(10);
   updateAnswerColor();
 };
 
@@ -124,6 +124,11 @@ answerButton.onclick = (e) => {
 restartButton.onclick = (e) => {
   init();
 };
+
+function vibrate(ms){
+const canVibrate = window.navigator.vibrate
+if (canVibrate) window.navigator.vibrate(ms)
+}
 
 function updateAnswerColor() {
   answerContainer.style.backgroundColor = `rgb(${colorAnswer.r},${colorAnswer.g},${colorAnswer.b})`;
