@@ -139,9 +139,9 @@ function updateTargetColor() {
 }
 
 function generateRandomColor() {
-  const r = Math.round((Math.random() * 255) / 5) * 5;
-  const g = Math.round((Math.random() * 255) / 5) * 5;
-  const b = Math.round((Math.random() * 255) / 5) * 5;
+  const r = Math.round((Math.random() * 255) / 15) * 15;
+  const g = Math.round((Math.random() * 255) / 15) * 15;
+  const b = Math.round((Math.random() * 255) / 15) * 15;
   return { r, g, b };
 }
 
